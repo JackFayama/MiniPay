@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />  
+  <meta name="theme-color" content="#111827">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Success</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background-color: #111827; /* dark gray */
+    }
+
+    .modal {
+      transition: opacity 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center text-white min-h-screen px-4">
+  <!-- Modal Container -->
+  <div id="modal" class="modal bg-gray-900 p-8 rounded-2xl shadow-xl max-w-sm w-full text-center mb-6">
+    <h1 class="text-2xl font-bold text-green-400 mb-2"></h1>
+    <p class="text-white text-sm mb-4">Dear Jacob, Your funds have been sent successfully.</p>
+
+    <div class="bg-gray-800 p-4 rounded-lg mb-4">
+      <p class="text-lg font-semibold mb-1">Amount</p>
+      <p id="amount" class="text-3xl font-bold text-green-400">-- KES</p>
+    </div>
+
+    <div class="bg-gray-800 p-4 rounded-lg text-sm text-left space-y-1 mb-4">
+      <p><strong>Operator:</strong> <span id="operator">M-PESA</span></p>
+      <p><strong>Phone:</strong> <span id="phone">+254790408472</span></p>
+      <p><strong>Date:</strong> <span id="date">--</span></p>
+      <p><strong>Time:</strong> <span id="time">--</span></p>
+    </div>
+
+    <p class="text-xs text-gray-400"></p>
+  </div>
+
+  <!-- Done Button -->
+  <button id="doneBtn" class="w-full max-w-sm bg-blue-600 text-white py-3 rounded-lg font-semibold mb-6">
+    Done
+  </button>
+
+  <script>
+    function updateModalContent() {
+      const summary = JSON.parse(localStorage.getItem("withdrawSummary")) || {};
+      const exchangeRate = 131;
+
+      // summary.amount is in USD, convert to KES
+      const amountUSD = parseFloat(summary.amount) || 0;
+      const amountKES = (amountUSD * exchangeRate).toFixed(2);
+
+      document.getElementById("amount").innerText = `${amountKES} KES`;
+      document.getElementById("operator").innerText = summary.operator || 'M-PESA';
+      document.getElementById("phone").innerText = summary.phone || '+254790408472';
+      document.getElementById("date").innerText = summary.date || '--';
+      document.getElementById("time").innerText = summary.time || '--';
+
+      // Store KES amount for later use on Done click
+      return {
+        amountKES,
+        operator: summary.operator || 'M-PESA',
+        phone: summary.phone || '+254790408472',
+        date: summary.date || '--',
+        time: summary.time || '--'
+      };
+    }
+
+    const currentSummary = updateModalContent();
+
+    // Refresh modal content every 10 seconds without blinking
+    setInterval(() => {
+      const updatedSummary = updateModalContent();
+      // Update currentSummary reference in case of changes
+      Object.assign(currentSummary, updatedSummary);
+    }, 10000);
+
+    document.getElementById('doneBtn').addEventListener('click', () => {
+      // Get existing recent activities or create new array
+      const recentActivities = JSON.parse(localStorage.getItem("recentActivities")) || [];
+
+      // Add current withdrawal to recent activities
+      recentActivities.push({
+        operator: currentSummary.operator,
+        phone: currentSummary.phone,
+        amountKES: currentSummary.amountKES,
+        date: currentSummary.date,
+        time: currentSummary.time,
+        type: "Withdrawal" // optional to identify type of activity
+      });
+
+      // Save back to localStorage
+      localStorage.setItem("recentActivities", JSON.stringify(recentActivities));
+
+      // Redirect to index.html
+      window.location.href = "index.html";
+    });
+  </script>
+  <script>
+  // Get the deposited amount
+  const amount = localStorage.getItem('transactionAmount') || '0.00';
+
+  // Format date and time
+  const now = new Date();
+  const formattedDate = now.toLocaleDateString();
+  const formattedTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+  // Create the new transaction
+  const newTransaction = {
+    name: "M-Pesa",
+    type: "- Ksh " + parseFloat(amount).toFixed(2),
+    color: "text-red-400",
+    date: formattedDate,
+    time: formattedTime
+  };
+
+  // Load previous transactions or start fresh
+  let transactions = JSON.parse(localStorage.getItem("recentTransactions") || "[]");
+
+  // Add new transaction to the top
+  transactions.unshift(newTransaction);
+
+  // Save back to localStorage
+  localStorage.setItem("recentTransactions", JSON.stringify(transactions));
+</script>
+
+</body>
+</html>

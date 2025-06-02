@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#111827">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Withdraw Funds</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-black font-sans p-4">
+<!-- Back Arrow -->
+<button onclick="location.href='deposit.html'" class="absolute left-4 top-4">
+  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7M3 12h18" />
+  </svg>
+</button>
+
+<!-- Add space below arrow before nav -->
+<div class="h-12"></div>  
+
+ 
+
+  <!-- Navigation -->
+  <div class="flex mb-4">
+    <button class="text-blue-600 font-semibold border-b-2 border-blue-600 px-4 py-2">Withdraw</button>
+    <button class="text-gray-400 px-4 py-2">Deposit</button>
+  </div>
+
+  <!-- I want to withdraw -->
+  <label class="block text-gray-600 mb-1">I want to withdraw</label>
+  <div class="flex items-center border rounded-lg px-4 py-3 mb-4 bg-gray-100">
+    <input id="withdrawAmount" type="text" class="bg-transparent w-full text-lg font-semibold" readonly />
+    <span class="ml-2 font-medium">USD</span>
+  </div>
+
+  <!-- You Get Estimate -->
+  <label class="block text-gray-600 mb-1">You Get (Estimate)</label>
+  <div class="flex items-center border rounded-lg px-4 py-3 mb-2 bg-gray-100">
+    <input id="kesValue" type="text" class="bg-transparent w-full text-lg font-semibold text-green-600" readonly />
+    <span class="ml-2 font-medium">KES</span>
+  </div>
+  <p class="text-xs text-gray-500 mb-4">1 USD = 131 KES</p>
+
+  <!-- Summary -->
+  <div class="border rounded-lg p-4 mb-4 bg-gray-50 text-sm text-gray-700">
+    <span id="summaryText">You get KES for USD</span>
+  </div>
+
+  <!-- Delivery Info -->
+  <div class="border rounded-lg p-4 bg-gray-50 mb-6">
+    <h2 class="text-blue-600 font-medium mb-2">Cash will be sent to:</h2>
+    <p class="text-gray-800 text-sm"><strong>Operator:</strong> M-PESA</p>
+    <p class="text-gray-800 text-sm"><strong>Phone:</strong> +254790408472</p>
+  </div>
+
+  <!-- Done Button -->
+  <button id="doneBtn" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">Done</button>
+
+  <script>
+// Get the amount from localStorage (USD), convert to KES
+const usd = parseFloat(localStorage.getItem('lastDeposit') || 0);
+const exchangeRate = 131;
+const estimatedKES = (usd * exchangeRate).toFixed(2);
+
+document.getElementById('withdrawAmount').value = usd.toFixed(2);
+document.getElementById('kesValue').value = estimatedKES;
+document.getElementById('summaryText').innerText = `You get ~${estimatedKES} KES for ${usd.toFixed(2)} USD`;
+
+document.getElementById('doneBtn').addEventListener('click', () => {
+  const now = new Date();
+  const date = now.toLocaleDateString();
+  const time = now.toLocaleTimeString();
+  localStorage.setItem("withdrawSummary", JSON.stringify({
+    amount: usd.toFixed(2),
+    operator: "M-PESA",
+    phone: "+254790408472",
+    date,
+    time
+  }));
+  window.location.href = "success.html";
+});
+
+  </script>
+</body>
+</html>

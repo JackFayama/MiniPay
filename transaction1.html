@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="refresh" content="10">
+  <title>MiniPay Receipt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .safe-height {
+      height: 100vh;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col overflow-hidden safe-height">
+
+  <!-- Back Arrow -->
+  <button onclick="location.href='index.html'" class="absolute top-4 left-4 z-10">
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7 7-7M3 12h18" />
+    </svg>
+  </button>
+
+  <!-- Scrollable Content Area -->
+  <div class="flex-1 overflow-y-auto px-4 pt-16 space-y-6">
+    <!-- Amount and Date -->
+    <div>
+      <p class="text-sm text-gray-400">You've sent</p>
+      <div class="flex items-baseline justify-between">
+        <div class="flex items-baseline space-x-2">
+          <span class="text-red-400 text-3xl font-bold">1,340.00</span>
+          <span class="text-red-400 text-lg font-semibold">USDT</span>
+        </div>
+        <span class="text-sm text-gray-400">(≈Ksh 179,928)</span>
+      </div>
+      <p class="text-sm text-gray-400 mt-1">28 May 2025 21:36 pm</p>
+    </div>
+
+    <hr class="border-gray-700">
+
+    <!-- From Section -->
+    <div>
+      <p class="text-sm text-gray-400 mb-2">To</p>
+      <div class="flex items-center space-x-4">
+        <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <div>
+          <p class="text-base font-semibold">M-pesa</p>
+          <div class="bg-gray-700 text-white text-sm rounded-full px-3 py-1 mt-1 inline-block">
+            Transaction Completed
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed Bottom Buttons -->
+  <div class="p-4 space-y-4 bg-gray-900">
+    <button class="w-full border border-gray-600 text-white py-3 rounded-xl">Blockchain receipt</button>
+    <a href="index.html" class="block w-full bg-white text-gray-900 text-center py-3 rounded-xl font-semibold">Done</a>
+  </div>
+
+  <script>
+    // Set dynamic height to avoid viewport bugs on mobile
+    function setRealHeight() {
+      document.body.style.height = window.innerHeight + "px";
+    }
+    window.addEventListener("load", setRealHeight);
+    window.addEventListener("resize", setRealHeight);
+  </script>
+</body>
+</html>
