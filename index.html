@@ -464,6 +464,7 @@
       el.textContent = formatDateTime(isoTimestamp);
     }
   });
+</script>
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -472,6 +473,19 @@
         .catch(err => console.error('Service Worker registration failed:', err));
     });
   }
+</script>
+<script>
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    // Optionally show your own install button
+    console.log('Install prompt saved.');
+
+    // Trigger prompt somewhere in your UI:
+    // deferredPrompt.prompt();
+  });
 </script>
 
 </body>
