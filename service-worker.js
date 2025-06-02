@@ -1,6 +1,6 @@
 const CACHE_NAME = 'minipay-cache-v1';
 const urlsToCache = [
-    '/',
+  '/',
   '/index.html',
   '/manifest.json',
   '/deposit.html',
@@ -14,7 +14,7 @@ const urlsToCache = [
   '/profile.html',
   '/send (3).svg',
   '/service-worker.js',
-  '/style.css', // CSS file
+  '/style.css',
   '/success.html',
   '/transaction.html',
   '/transaction1.html',
@@ -22,6 +22,8 @@ const urlsToCache = [
   '/user.svg',
   '/visa.jpg',
   '/7123945_logo_pay_google_gpay_icon.png',
+  '/icons/icon-192.png',
+  '/icons/icon-512.png'
 ];
 
 // Install the service worker and cache required files
@@ -31,21 +33,23 @@ self.addEventListener('install', (event) => {
       return cache.addAll(urlsToCache);
     })
   );
+  self.skipWaiting();
 });
 
 // Activate the service worker and clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
+    caches.keys().then((cacheNames) =>
+      Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
             return caches.delete(cacheName);
           }
         })
-      );
-    })
+      )
+    )
   );
+  self.clients.claim();
 });
 
 // Intercept fetch requests and serve cached responses when available
@@ -55,7 +59,8 @@ self.addEventListener('fetch', (event) => {
       return (
         cachedResponse ||
         fetch(event.request).catch(() => {
-          // Optionally return a fallback page/image here
+          // Optional: Return fallback page or offline asset
+          return new Response('Offline');
         })
       );
     })
