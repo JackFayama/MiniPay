@@ -2,21 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="theme-color" content="#111827">
+  <meta name="theme-color" content="#111827" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <link rel="icon" href="icon-192.png" sizes="192x192" />
   <link rel="apple-touch-icon" href="icon-192.png" sizes="192x192" />
   <link rel="manifest" href="manifest.json" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MiniPay</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: 'Helvetica', sans-serif;
+    html, body {
+      margin: 0;
+      padding: env(safe-area-inset-top, 0) 0 0 0;
+      height: 100%;
       background-color: #111827;
+      font-family: 'Helvetica', sans-serif;
+      color: white;
     }
   </style>
 </head>
-
 <body class="bg-gray-900 text-white font-sans">
   <div class="max-w-sm mx-auto">
 <!-- Welcome Bar -->
