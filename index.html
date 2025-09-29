@@ -37,25 +37,22 @@
     <!-- Balance Card -->
     <div class="bg-green-600 rounded-2xl mt-4 p-4 text-white relative">
       <div class="text-sm opacity-80">Total</div>
-      <div class="text-4xl font-bold">$22,033.49</div>
+      <div class="text-4xl font-bold" id="balance">$22,033.49</div>
       <div class="absolute top-4 right-4 flex items-center space-x-1">
         <span class="text-sm font-semibold"></span>
         <label class="inline-flex items-center cursor-pointer">
         </label>
       </div>
       
-      <a href="deposit.html" class="block w-full">
       <div class="mt-6 flex justify-between">
-        <button class="flex items-center bg-white text-green-700 font-semibold px-4 py-2 rounded-full">
+        <button id="addCashBtn" class="flex items-center bg-white text-green-700 font-semibold px-4 py-2 rounded-full">
           <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 5a1 1 0 00-1 1v4H5a1 1 0 000 2h4v4a1 1 0 002 0v-4h4a1 1 0 000-2h-4V6a1 1 0 00-1-1z" />
           </svg>
           Add cash
         </button>
-        </a>
       
-      <a href="deposit.html">  
-      <button class="flex items-center bg-white text-green-700 font-semibold px-4 py-2 rounded-full">
+        <button id="withdrawBtn" class="flex items-center bg-white text-green-700 font-semibold px-4 py-2 rounded-full">
           <svg class="w-4 h-4 mr-2 rotate-45" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 5a1 1 0 011 1v4h4a1 1 0 010 2h-4v4a1 1 0 01-2 0v-4H5a1 1 0 010-2h4V6a1 1 0 011-1z" />
           </svg>
@@ -63,7 +60,6 @@
         </button>
       </div>
     </div>
-   </a>
 
    <!-- Promotion -->
 <div id="promo-bar" class="rounded-xl mt-4 p-4 relative max-w-sm"
@@ -74,202 +70,14 @@
 </div> 
 
    <!-- Recent Activity Section -->
-<!-- Recent Activity Section -->
 <div class="bg-gray-800 mt-4 p-4 rounded-xl relative">
   <div class="flex justify-between items-center mb-3">
     <h2 class="text-md font-semibold">Recent activity</h2>
     <button class="text-sm text-gray-400">View more</button>
   </div>
 
-   <a href="transaction2.html" class="block w-full">
-  <div class="space-y-4">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center space-x-3">
-          <div class="bg-blue-700 p-2 rounded-full">
-            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9zM10 5a.75.75 0 01.75.75v3.5h2a.75.75 0 010 1.5H9.25A.75.75 0 018.5 10V5.75A.75.75 0 0110 5z" clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <div>
-            <div class="text-sm font-semibold">Fanaka Homes</div>
-            <div class="text-xs text-gray-400" data-timestamp="2025-09-22 13:32"></div>
-          </div>
-        </div>
-        <div class="text-green-400 font-semibold">+$2,530.00</div>
-      </div>
-  </a>
-  
-  <a href="transaction3.html" class="block w-full">
-  <div class="space-y-4"> 
-  <div class="flex justify-between items-center">
-    <div class="flex items-center space-x-3">
-      <div class="bg-blue-700 p-2 rounded-full">
-        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9zM10 5a.75.75 0 01.75.75v3.5h2a.75.75 0 010 1.5H9.25A.75.75 0 018.5 10V5.75A.75.75 0 0110 5z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-      <div>
-        <div class="text-sm font-semibold">Brigit Mukeu</div>
-        <div class="text-xs text-gray-400" data-timestamp="2025-09-20 18:48:12"></div>
-      </div>
-    </div>
-    <div class="text-green-400 font-semibold">+$1,060.00</div>
-  </div>
-  </a>   
-
-   <a href="transaction2.html" class="block w-full">
-  <div class="space-y-4">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center space-x-3">
-          <div class="bg-blue-700 p-2 rounded-full">
-            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9zM10 5a.75.75 0 01.75.75v3.5h2a.75.75 0 010 1.5H9.25A.75.75 0 018.5 10V5.75A.75.75 0 0110 5z" clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <div>
-            <div class="text-sm font-semibold">Odan Pharmaceuticals</div>
-            <div class="text-xs text-gray-400" data-timestamp="2025-09-18 11:32"></div>
-          </div>
-        </div>
-            <div class="text-green-400 font-semibold">+$1,914.22</div>
-      </div>
-  </a>
-  
-  <a href="transaction3.html" class="block w-full">
-  <div class="space-y-4"> 
-  <div class="flex justify-between items-center">
-    <div class="flex items-center space-x-3">
-      <div class="bg-blue-700 p-2 rounded-full">
-        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9zM10 5a.75.75 0 01.75.75v3.5h2a.75.75 0 010 1.5H9.25A.75.75 0 018.5 10V5.75A.75.75 0 0110 5z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-      <div>
-        <div class="text-sm font-semibold">Miswalleh Hinsallah</div>
-        <div class="text-xs text-gray-400" data-timestamp="2025-09-16 22:13:32"></div>
-      </div>
-    </div>
-        <div class="text-red-400 font-semibold">-$190.00</div>
-  </div>
-  </a>   
-  
- <a href="transaction2.html" class="block w-full">
-  <div class="space-y-4">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center space-x-3">
-          <div class="bg-blue-700 p-2 rounded-full">
-            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9zM10 5a.75.75 0 01.75.75v3.5h2a.75.75 0 010 1.5H9.25A.75.75 0 018.5 10V5.75A.75.75 0 0110 5z" clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <div>
-            <div class="text-sm font-semibold">Emily Lucas</div>
-            <div class="text-xs text-gray-400" data-timestamp="2025-09-12 23:56"></div>
-          </div>
-        </div>
-            <div class="text-green-400 font-semibold">+$488.00</div>
-      </div>
-  </a>
-    
-  <a href="transaction1.html" class="block w-full">
-  <div class="space-y-4"> 
-  <div class="flex justify-between items-center">
-    <div class="flex items-center space-x-3">
-      <div class="bg-blue-700 p-2 rounded-full">
-        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9zM10 5a.75.75 0 01.75.75v3.5h2a.75.75 0 010 1.5H9.25A.75.75 0 018.5 10V5.75A.75.75 0 0110 5z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-      <div>
-        <div class="text-sm font-semibold">Bank Card 00792</div>
-        <div class="text-xs text-gray-400" data-timestamp="2025-09-10 14:42:00"></div>
-      </div>
-    </div>
-        <div class="text-red-400 font-semibold">-$2,830.00</div>
-  </div>
-  </a>   
-  
-  <a href="transaction.html" class="block w-full">
-    <div class="space-y-4">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center space-x-3">
-          <div class="bg-blue-700 p-2 rounded-full">
-            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9zM10 5a.75.75 0 01.75.75v3.5h2a.75.75 0 010 1.5H9.25A.75.75 0 018.5 10V5.75A.75.75 0 0110 5z" clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <div>
-            <div class="text-sm font-semibold">Agoda Company Pte. Ltd.</div>
-            <div class="text-xs text-gray-400" data-timestamp="2025-05-27 23:52:00"></div>
-          </div>
-        </div>
-            <div class="text-red-400 font-semibold">-$20.00</div>
-      </div>
-  </a>
-
-  <div class="flex justify-between items-center">
-    <div class="flex items-center space-x-3">
-      <div class="bg-blue-700 p-2 rounded-full">
-        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9zM10 5a.75.75 0 01.75.75v3.5h2a.75.75 0 010 1.5H9.25A.75.75 0 018.5 10V5.75A.75.75 0 0110 5z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-      <div>
-        <div class="text-sm font-semibold">M-pesa</div>
-        <div class="text-xs text-gray-400" data-timestamp="2025-05-22T10:22:00Z"></div>
-      </div>
-    </div>
-        <div class="text-red-400 font-semibold">-$20.00</div>
-  </div>
-
-  <div class="space-y-4">
-    <div class="flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <div class="bg-blue-700 p-2 rounded-full">
-          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9zM10 5a.75.75 0 01.75.75v3.5h2a.75.75 0 010 1.5H9.25A.75.75 0 018.5 10V5.75A.75.75 0 0110 5z" clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <div>
-          <div class="text-sm font-semibold">Agoda Company Pte. Ltd.</div>
-          <div class="text-xs text-gray-400" data-timestamp="2025-05-17T09:13:00Z"></div>
-        </div>
-      </div>
-      <div class="text-green-400 font-semibold">+$194.77</div>
-    </div>
-
-    <div class="space-y-4">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center space-x-3">
-          <div class="bg-blue-700 p-2 rounded-full">
-            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9zM10 5a.75.75 0 01.75.75v3.5h2a.75.75 0 010 1.5H9.25A.75.75 0 018.5 10V5.75A.75.75 0 0110 5z" clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <div>
-            <div class="text-sm font-semibold">Stripe Inc.</div>
-            <div class="text-xs text-gray-400" data-timestamp="2025-05-14T16:44:00Z"></div>
-          </div>
-        </div>
-        <div class="text-green-400 font-semibold">+$620.64</div>
-      </div>
-
-      <div class="flex justify-between items-center">
-        <div class="flex items-center space-x-3">
-          <div class="bg-green-700 p-2 rounded-full">
-            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M13 7H7v6h6V7z" />
-              <path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v10H5V5z" clip-rule="evenodd" />
-            </svg>
-          </div>
-          <div>
-            <div class="text-sm font-semibold">Refund</div>
-            <div class="text-xs text-gray-400" data-timestamp="2025-05-13T12:00:08Z"></div>
-          </div>
-        </div>
-        <div class="text-green-400 font-semibold">+$280.00</div>
-      </div>
-    </div>
+  <div id="transactionsList" class="space-y-4">
+    <!-- Transactions will be populated here -->
   </div>
 </div>
 
@@ -288,6 +96,99 @@
         <span class="text-xs">Profile</span>
       </div>
     </div>
+
+    <!-- Add Money Modal -->
+    <div id="addMoneyModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+      <div class="bg-gray-800 rounded-2xl p-6 w-full max-w-sm">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-semibold text-white">Add Money</h2>
+          <button id="closeAddModal" class="text-gray-400 hover:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+            <input type="text" id="addMoneyName" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-green-500" placeholder="Enter name">
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-2">Amount ($)</label>
+            <input type="number" id="addMoneyAmount" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-green-500" placeholder="0.00" step="0.01">
+          </div>
+          
+          <button id="submitAddMoney" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700">
+            Add Money
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Withdraw Modal -->
+    <div id="withdrawModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+      <div class="bg-gray-800 rounded-2xl p-6 w-full max-w-sm">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-semibold text-white">Withdraw Money</h2>
+          <button id="closeWithdrawModal" class="text-gray-400 hover:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+            <input type="text" id="withdrawName" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-green-500" placeholder="Enter name">
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-300 mb-2">Amount ($)</label>
+            <input type="number" id="withdrawAmount" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-green-500" placeholder="0.00" step="0.01">
+          </div>
+          
+          <button id="submitWithdraw" class="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700">
+            Withdraw Money
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Receipt Modal -->
+    <div id="receiptModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+      <div class="bg-gray-900 rounded-2xl w-full max-w-sm h-[90vh] flex flex-col overflow-hidden">
+        <!-- Header with close button -->
+        <div class="flex justify-between items-center mb-4">
+          <button id="closeReceiptModal" class="absolute top-4 left-4 z-10 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7 7-7M3 12h18"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Scrollable Content Area -->
+        <div class="flex-1 overflow-y-auto px-4 pt-12 space-y-6">
+          <div id="receiptContent" class="space-y-6 text-white">
+            <!-- Receipt content will be populated here -->
+          </div>
+        </div>
+
+        <!-- Fixed Bottom Buttons -->
+        <div class="p-4 space-y-4 bg-gray-900">
+          <button id="downloadReceiptBtn" class="w-full border border-gray-600 text-white py-3 rounded-xl flex items-center justify-center space-x-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Download Receipt</span>
+          </button>
+          <button id="closeReceiptModalDone" class="w-full bg-white text-gray-900 py-3 rounded-xl font-semibold">Done</button>
+        </div>
+      </div>
+    </div>
+
     <script>
   const promotions = [
     {
@@ -393,7 +294,7 @@
   bgColor: '#fff7ed',
   textColor: '#b45309',
   title: "Customer Support",
-  text: "We’re here to help you 24/7 with any questions or concerns.",
+  text: "We're here to help you 24/7 with any questions or concerns.",
   btnText: "Contact Us",
   btnBg: '#b45309',
   btnColor: '#fff',
@@ -518,31 +419,501 @@
 
   // Change promotion every 5 seconds
   setInterval(nextPromotion, 5000);
-</script>
-    
-<script>
-  // Function to format date and time (e.g., "May 21, 2025 14:35")
-  function formatDateTime(isoString) {
-    const options = {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: false
-    };
-    const date = new Date(isoString);
-    return date.toLocaleString(undefined, options);
+
+  // Transaction Management
+  class TransactionManager {
+    constructor() {
+      this.balance = parseFloat(localStorage.getItem('balance')) || 22033.49;
+      this.transactions = JSON.parse(localStorage.getItem('transactions')) || this.getDefaultTransactions();
+      this.currentReceiptTransaction = null;
+      this.updateBalance();
+      this.renderTransactions();
+    }
+
+    getDefaultTransactions() {
+      return [
+        {
+          id: 'tx_' + Date.now() + '_1',
+          name: 'Fanaka Homes',
+          amount: 2530.00,
+          type: 'credit',
+          timestamp: '2025-09-22T13:32:00Z'
+        },
+        {
+          id: 'tx_' + Date.now() + '_2',
+          name: 'Brigit Mukeu',
+          amount: 1060.00,
+          type: 'credit',
+          timestamp: '2025-09-20T18:48:12Z'
+        },
+        {
+          id: 'tx_' + Date.now() + '_3',
+          name: 'Odan Pharmaceuticals',
+          amount: 1914.22,
+          type: 'credit',
+          timestamp: '2025-09-18T11:32:00Z'
+        },
+        {
+          id: 'tx_' + Date.now() + '_4',
+          name: 'Miswalleh Hinsallah',
+          amount: 190.00,
+          type: 'debit',
+          timestamp: '2025-09-16T22:13:32Z'
+        },
+        {
+          id: 'tx_' + Date.now() + '_5',
+          name: 'Emily Lucas',
+          amount: 488.00,
+          type: 'credit',
+          timestamp: '2025-09-12T23:56:00Z'
+        },
+        {
+          id: 'tx_' + Date.now() + '_6',
+          name: 'Bank Card 00792',
+          amount: 2830.00,
+          type: 'debit',
+          timestamp: '2025-09-10T14:42:00Z'
+        },
+        {
+          id: 'tx_' + Date.now() + '_7',
+          name: 'Agoda Company Pte. Ltd.',
+          amount: 20.00,
+          type: 'debit',
+          timestamp: '2025-05-27T23:52:00Z'
+        }
+      ];
+    }
+
+    addTransaction(name, amount, type) {
+      const transaction = {
+        id: 'tx_' + Date.now(),
+        name: name,
+        amount: parseFloat(amount),
+        type: type,
+        timestamp: new Date().toISOString()
+      };
+
+      this.transactions.unshift(transaction);
+      
+      if (type === 'credit') {
+        this.balance += parseFloat(amount);
+      } else {
+        this.balance -= parseFloat(amount);
+      }
+
+      this.saveData();
+      this.updateBalance();
+      this.renderTransactions();
+      
+      return transaction;
+    }
+
+    saveData() {
+      localStorage.setItem('balance', this.balance.toString());
+      localStorage.setItem('transactions', JSON.stringify(this.transactions));
+    }
+
+    updateBalance() {
+      document.getElementById('balance').textContent = '$' + this.balance.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+    }
+
+    formatDateTime(isoString) {
+      const options = {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      };
+      const date = new Date(isoString);
+      return date.toLocaleString(undefined, options);
+    }
+
+    renderTransactions() {
+      const container = document.getElementById('transactionsList');
+      container.innerHTML = '';
+
+      this.transactions.slice(0, 10).forEach(transaction => {
+        const transactionEl = document.createElement('div');
+        transactionEl.className = 'flex justify-between items-center cursor-pointer hover:bg-gray-700 p-2 rounded-lg transition-colors';
+        transactionEl.onclick = () => this.showReceipt(transaction);
+        
+        const amountColor = transaction.type === 'credit' ? 'text-green-400' : 'text-red-400';
+        const amountPrefix = transaction.type === 'credit' ? '+' : '-';
+        
+        transactionEl.innerHTML = `
+          <div class="flex items-center space-x-3">
+            <div class="bg-blue-700 p-2 rounded-full">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9 7 7 0 01-9.9-9.9zM10 5a.75.75 0 01.75.75v3.5h2a.75.75 0 010 1.5H9.25A.75.75 0 018.5 10V5.75A.75.75 0 0110 5z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm font-semibold">${transaction.name}</div>
+              <div class="text-xs text-gray-400">${this.formatDateTime(transaction.timestamp)}</div>
+            </div>
+          </div>
+          <div class="${amountColor} font-semibold">${amountPrefix}$${transaction.amount.toFixed(2)}</div>
+        `;
+        
+        container.appendChild(transactionEl);
+      });
+    }
+
+    showReceipt(transaction) {
+      this.currentReceiptTransaction = transaction;
+      const modal = document.getElementById('receiptModal');
+      const content = document.getElementById('receiptContent');
+      
+      const amountColor = transaction.type === 'credit' ? 'text-green-400' : 'text-red-400';
+      const transactionTypeText = transaction.type === 'credit' ? 'received' : 'sent';
+      
+      content.innerHTML = `
+        <!-- Amount and Date -->
+        <div>
+          <p class="text-sm text-gray-400">You've ${transactionTypeText}</p>
+          <div class="flex items-baseline justify-between">
+            <div class="flex items-baseline space-x-2">
+              <span class="${amountColor} text-3xl font-bold">${transaction.amount.toFixed(2)}</span>
+              <span class="${amountColor} text-lg font-semibold">USD</span>
+            </div>
+            <span class="text-sm text-gray-400">(≈Ksh ${(transaction.amount * 134.2).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',')})</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-1">${this.formatDateTime(transaction.timestamp)}</p>
+        </div>
+
+        <hr class="border-gray-700">
+
+        <!-- From/To Section -->
+        <div>
+          <p class="text-sm text-gray-400 mb-2">${transaction.type === 'credit' ? 'From' : 'To'}</p>
+          <div class="flex items-center space-x-4">
+            <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div>
+              <p class="text-base font-semibold">${transaction.name}</p>
+              <div class="bg-gray-700 text-white text-sm rounded-full px-3 py-1 mt-1 inline-block">
+                Transaction Completed
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional spacing for long receipt -->
+        <div class="space-y-4">
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <div class="text-sm text-gray-400 mb-2">Transaction Details</div>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-gray-400">Transaction ID:</span>
+                <span class="font-mono text-xs">${transaction.id}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-400">Status:</span>
+                <span class="text-green-400">Completed</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-400">Payment Method:</span>
+                <span>MiniPay Wallet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      modal.classList.remove('hidden');
+    }
+
+    downloadReceipt(transaction) {
+      const receiptContent = this.generateReceiptHTML(transaction);
+      
+      // Create a new window for printing/downloading
+      const printWindow = window.open('', '_blank');
+      if (printWindow) {
+        printWindow.document.write(receiptContent);
+        printWindow.document.close();
+        
+        // Trigger print dialog which allows saving as PDF
+        setTimeout(() => {
+          printWindow.print();
+        }, 500);
+      }
+    }
+
+    generateReceiptHTML(transaction) {
+      const amountColor = transaction.type === 'credit' ? '#10b981' : '#ef4444';
+      const transactionTypeText = transaction.type === 'credit' ? 'received' : 'sent';
+      const statusText = 'Transaction Completed';
+      
+      return `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>MiniPay Receipt</title>
+          <style>
+            body {
+              font-family: 'Helvetica', Arial, sans-serif;
+              max-width: 400px;
+              margin: 0 auto;
+              padding: 40px 20px;
+              background: white;
+              color: #333;
+              line-height: 1.6;
+            }
+            .header {
+              text-align: center;
+              margin-bottom: 40px;
+              border-bottom: 2px solid #e5e7eb;
+              padding-bottom: 20px;
+            }
+            .logo {
+              font-size: 24px;
+              font-weight: bold;
+              color: #10b981;
+              margin-bottom: 10px;
+            }
+            .receipt-title {
+              font-size: 18px;
+              font-weight: 600;
+              margin-bottom: 5px;
+            }
+            .amount-section {
+              text-align: center;
+              margin: 30px 0;
+              padding: 20px;
+              background: #f9fafb;
+              border-radius: 12px;
+            }
+            .amount {
+              font-size: 32px;
+              font-weight: bold;
+              color: ${amountColor};
+              margin: 10px 0;
+            }
+            .details-section {
+              margin: 30px 0;
+            }
+            .detail-row {
+              display: flex;
+              justify-content: space-between;
+              margin: 15px 0;
+              padding: 10px 0;
+              border-bottom: 1px solid #e5e7eb;
+            }
+            .detail-label {
+              font-weight: 600;
+              color: #6b7280;
+            }
+            .detail-value {
+              font-weight: 500;
+              text-align: right;
+            }
+            .status-badge {
+              display: inline-block;
+              background: #10b981;
+              color: white;
+              padding: 6px 12px;
+              border-radius: 20px;
+              font-size: 12px;
+              font-weight: 600;
+            }
+            .footer {
+              margin-top: 50px;
+              text-align: center;
+              padding-top: 30px;
+              border-top: 2px solid #e5e7eb;
+            }
+            .official-stamp {
+              display: inline-block;
+              border: 3px solid #10b981;
+              border-radius: 50%;
+              padding: 15px;
+              margin: 20px 0;
+              background: #ecfdf5;
+            }
+            .stamp-text {
+              font-size: 12px;
+              font-weight: bold;
+              color: #10b981;
+              text-align: center;
+              line-height: 1.2;
+            }
+            .disclaimer {
+              font-size: 10px;
+              color: #6b7280;
+              margin-top: 20px;
+            }
+            @media print {
+              body { margin: 0; padding: 20px; }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="header">
+            <div class="logo">MiniPay</div>
+            <div class="receipt-title">Transaction Receipt</div>
+            <div style="font-size: 12px; color: #6b7280;">Receipt #${transaction.id}</div>
+          </div>
+
+          <div class="amount-section">
+            <div style="font-size: 14px; color: #6b7280; margin-bottom: 10px;">
+              You've ${transactionTypeText}
+            </div>
+            <div class="amount">$${transaction.amount.toFixed(2)}</div>
+            <div style="font-size: 14px; color: #6b7280;">
+              ≈Ksh ${(transaction.amount * 134.2).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+            </div>
+          </div>
+
+          <div class="details-section">
+            <div class="detail-row">
+              <span class="detail-label">${transaction.type === 'credit' ? 'From' : 'To'}:</span>
+              <span class="detail-value">${transaction.name}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Date & Time:</span>
+              <span class="detail-value">${this.formatDateTime(transaction.timestamp)}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Transaction ID:</span>
+              <span class="detail-value" style="font-family: monospace; font-size: 11px;">${transaction.id}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Status:</span>
+              <span class="detail-value"><span class="status-badge">${statusText}</span></span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Payment Method:</span>
+              <span class="detail-value">MiniPay Wallet</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Reference:</span>
+              <span class="detail-value">MP${Date.now().toString().slice(-8)}</span>
+            </div>
+          </div>
+
+          <div class="footer">
+            <div class="official-stamp">
+              <div class="stamp-text">
+                OFFICIAL<br>
+                RECEIPT<br>
+                VERIFIED
+              </div>
+            </div>
+            <div style="font-size: 12px; font-weight: 600; margin: 10px 0;">
+              This is an official receipt from MiniPay
+            </div>
+            <div class="disclaimer">
+              This receipt serves as proof of transaction. Keep this for your records.<br>
+              For support, contact: support@minipay.com | +254-700-000-000<br>
+              Generated on: ${new Date().toLocaleString()}
+            </div>
+          </div>
+        </body>
+        </html>
+      `;
+    }
   }
 
-  // Replace each "6 days ago" with formatted date & time
-  document.querySelectorAll('[data-timestamp]').forEach(el => {
-    const isoTimestamp = el.getAttribute('data-timestamp');
-    if (isoTimestamp) {
-      el.textContent = formatDateTime(isoTimestamp);
+  // Initialize transaction manager
+  const transactionManager = new TransactionManager();
+
+  // Modal controls
+  const addMoneyModal = document.getElementById('addMoneyModal');
+  const withdrawModal = document.getElementById('withdrawModal');
+  const receiptModal = document.getElementById('receiptModal');
+
+  // Add Money Modal
+  document.getElementById('addCashBtn').addEventListener('click', () => {
+    addMoneyModal.classList.remove('hidden');
+  });
+
+  document.getElementById('closeAddModal').addEventListener('click', () => {
+    addMoneyModal.classList.add('hidden');
+    document.getElementById('addMoneyName').value = '';
+    document.getElementById('addMoneyAmount').value = '';
+  });
+
+  document.getElementById('submitAddMoney').addEventListener('click', () => {
+    const name = document.getElementById('addMoneyName').value.trim();
+    const amount = document.getElementById('addMoneyAmount').value.trim();
+
+    if (!name || !amount || parseFloat(amount) <= 0) {
+      alert('Please enter valid name and amount');
+      return;
+    }
+
+    transactionManager.addTransaction(name, amount, 'credit');
+    addMoneyModal.classList.add('hidden');
+    document.getElementById('addMoneyName').value = '';
+    document.getElementById('addMoneyAmount').value = '';
+  });
+
+  // Withdraw Modal
+  document.getElementById('withdrawBtn').addEventListener('click', () => {
+    withdrawModal.classList.remove('hidden');
+  });
+
+  document.getElementById('closeWithdrawModal').addEventListener('click', () => {
+    withdrawModal.classList.add('hidden');
+    document.getElementById('withdrawName').value = '';
+    document.getElementById('withdrawAmount').value = '';
+  });
+
+  document.getElementById('submitWithdraw').addEventListener('click', () => {
+    const name = document.getElementById('withdrawName').value.trim();
+    const amount = document.getElementById('withdrawAmount').value.trim();
+
+    if (!name || !amount || parseFloat(amount) <= 0) {
+      alert('Please enter valid name and amount');
+      return;
+    }
+
+    if (parseFloat(amount) > transactionManager.balance) {
+      alert('Insufficient balance');
+      return;
+    }
+
+    transactionManager.addTransaction(name, amount, 'debit');
+    withdrawModal.classList.add('hidden');
+    document.getElementById('withdrawName').value = '';
+    document.getElementById('withdrawAmount').value = '';
+  });
+
+  // Receipt Modal
+  document.getElementById('closeReceiptModal').addEventListener('click', () => {
+    receiptModal.classList.add('hidden');
+  });
+
+  document.getElementById('closeReceiptModalDone').addEventListener('click', () => {
+    receiptModal.classList.add('hidden');
+  });
+
+  document.getElementById('downloadReceiptBtn').addEventListener('click', () => {
+    if (transactionManager.currentReceiptTransaction) {
+      transactionManager.downloadReceipt(transactionManager.currentReceiptTransaction);
     }
   });
+
+  // Close modals when clicking outside
+  [addMoneyModal, withdrawModal, receiptModal].forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+  });
 </script>
+    
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
